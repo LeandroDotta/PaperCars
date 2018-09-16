@@ -267,7 +267,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0.25
+  m_EdgeRadius: 0.5
   m_Points:
   - {x: -7.5633497, y: 2.8500285}
   - {x: -6.069194, y: 3.1201959}
@@ -785,7 +785,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &501738351
 Rigidbody2D:
   serializedVersion: 4
@@ -998,7 +998,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.547334, y: 6.93, z: -10}
+  m_LocalPosition: {x: 8.556574, y: 6.93, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1021,7 +1021,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &645976036
 Rigidbody2D:
   serializedVersion: 4
@@ -1185,7 +1185,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 655852331}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.547334, y: 6.93, z: -10}
+  m_LocalPosition: {x: 8.556574, y: 6.93, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2030923313}
@@ -1209,7 +1209,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &813113715
 Rigidbody2D:
   serializedVersion: 4
@@ -1331,7 +1331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &891852381
 Rigidbody2D:
   serializedVersion: 4
@@ -1537,7 +1537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1020078228
 Rigidbody2D:
   serializedVersion: 4
@@ -1681,6 +1681,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114701112825730634, guid: a6fd167b2d6a2f14c96fadd3736b209c,
+        type: 2}
+      propertyPath: _healthBar
+      value: 
+      objectReference: {fileID: 956605748}
     - target: {fileID: 1841111739669618, guid: a6fd167b2d6a2f14c96fadd3736b209c, type: 2}
       propertyPath: m_Name
       value: Car
@@ -1689,20 +1694,6 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1841111739669618, guid: a6fd167b2d6a2f14c96fadd3736b209c, type: 2}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 114701112825730634, guid: a6fd167b2d6a2f14c96fadd3736b209c,
-        type: 2}
-      propertyPath: invulnarableTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114701112825730634, guid: a6fd167b2d6a2f14c96fadd3736b209c,
-        type: 2}
-      propertyPath: _healthBar
-      value: 
-      objectReference: {fileID: 956605748}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6fd167b2d6a2f14c96fadd3736b209c, type: 2}
   m_IsPrefabAsset: 0
@@ -1860,7 +1851,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1220266843
 Rigidbody2D:
   serializedVersion: 4
@@ -2117,7 +2108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1821115641
 Rigidbody2D:
   serializedVersion: 4
@@ -2428,7 +2419,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0.25
+  m_EdgeRadius: 0.5
   m_Points:
   - {x: -4.071843, y: 6.448414}
   - {x: -4.0384235, y: 4.189023}
@@ -2489,7 +2480,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &2017869851
 Rigidbody2D:
   serializedVersion: 4
@@ -2705,7 +2696,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0.25
+  m_EdgeRadius: 0.5
   m_Points:
   - {x: -7.5633497, y: 2.8500285}
   - {x: -6.069194, y: 3.1201959}

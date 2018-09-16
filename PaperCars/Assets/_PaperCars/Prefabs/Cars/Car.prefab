@@ -556,6 +556,8 @@ MonoBehaviour:
   jumpForce: 12000
   health: 100
   invulnarableTime: 1
+  impactDamage: 5
+  damagePerSecond: 2
   rb2d: {fileID: 50202930982516792}
   wheelBack: {fileID: 114783813639590294}
   wheelFront: {fileID: 114891705737214266}

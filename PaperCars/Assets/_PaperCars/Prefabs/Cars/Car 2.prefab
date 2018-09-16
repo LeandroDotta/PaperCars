@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 235951546046437996}
   m_Layer: 0
   m_Name: Car 2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -643,11 +643,14 @@ MonoBehaviour:
   speedRotation: 150
   jumpForce: 12000
   health: 100
-  invulnarableTime: 2
+  invulnarableTime: 1
+  impactDamage: 5
+  damagePerSecond: 2
   rb2d: {fileID: 50506486922446228}
   wheelBack: {fileID: 114118868089460244}
   wheelFront: {fileID: 114737945667631418}
   hitbox: {fileID: 60270726340602094}
+  _healthBar: {fileID: 0}
 --- !u!114 &114737945667631418
 MonoBehaviour:
   m_ObjectHideFlags: 1

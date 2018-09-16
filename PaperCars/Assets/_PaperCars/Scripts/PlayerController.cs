@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     public float health = 100;
     public float invulnarableTime;
+    public float impactDamage = 5;
+    public float damagePerSecond = 2f;
 
     [Header("Components")]
     [SerializeField] private Rigidbody2D rb2d;
@@ -28,9 +30,11 @@ public class PlayerController : MonoBehaviour
     private bool rotateRight;
     private bool rotateLeft;
     private bool isInvulnerable;
+    private bool isOverturned;
 
     private void Start()
     {
+        StartCoroutine("ConstantDamageCoroutine");
     }
 
     private void FixedUpdate()
@@ -86,7 +90,6 @@ public class PlayerController : MonoBehaviour
         {
             rb2d.angularVelocity = speedRotation;
         }
-
     }
 
     private void Update()
@@ -122,7 +125,7 @@ public class PlayerController : MonoBehaviour
     //     }
     // }
 
-    private void OnCollisionStay2D(Collision2D other)
+    private void CheckImpactDamage(Collision2D other)
     {
         if (!isInvulnerable)
         {
@@ -130,10 +133,13 @@ public class PlayerController : MonoBehaviour
             {
                 if (hitbox.OverlapPoint(contact.point))
                 {
+                    Debug.Log("Relative Velocity: " + other.relativeVelocity.magnitude);
                     Debug.Log("Deal Damage!");
-                    health -= 10;
 
-                    if(health <= 0 )
+                    int damageMultiplier = Mathf.FloorToInt(other.relativeVelocity.magnitude / 10);
+                    health -= impactDamage * damageMultiplier;
+
+                    if (health <= 0)
                     {
                         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                     }
@@ -145,6 +151,30 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void CheckConstantDamage(Collision2D other)
+    {
+        float zRotation = transform.rotation.eulerAngles.z;
+        if (zRotation > 120 && zRotation < 240) // Is overturned
+        {
+            isOverturned = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        CheckImpactDamage(other);
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        CheckConstantDamage(other);
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        isOverturned = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -170,6 +200,7 @@ public class PlayerController : MonoBehaviour
         GUI.Label(rect, "Wheel F Grounded: " + wheelFront.IsGrounded); rect.y += y;
         GUI.Label(rect, "Velocity: " + rb2d.velocity); rect.y += y;
         GUI.Label(rect, "Angular Velocity: " + rb2d.angularVelocity); rect.y += y;
+        GUI.Label(rect, "Velocity Magnitude: " + rb2d.velocity.magnitude); rect.y += y;
 
         GUI.Label(rect, "INPUTS:"); rect.y += y;
         GUI.Label(rect, "Horizontal Axis: " + axisHorizontal); rect.y += y;
@@ -186,5 +217,23 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(invulnarableTime);
 
         isInvulnerable = false;
+    }
+
+    private IEnumerator ConstantDamageCoroutine()
+    {
+        while (true)
+        {
+            if (isOverturned)
+            {
+                health -= damagePerSecond;
+                _healthBar.SetHealth(health);
+
+                yield return new WaitForSeconds(1);
+            }
+            else
+            {
+                yield return null;
+            }
+        }
     }
 }
