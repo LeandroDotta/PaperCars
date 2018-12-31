@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 235696586793663300}
   - component: {fileID: 235380149013332890}
   m_Layer: 0
-  m_Name: Vehicle Base
+  m_Name: Vehicle_Body01
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,9 +161,9 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414303830142248}
   m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingLayerID: -1444353615
+  m_SortingLayer: 1
+  m_SortingOrder: 0
 --- !u!50 &50202930982516792
 Rigidbody2D:
   serializedVersion: 4
