@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   vehicleName: Carro do Gustavo
-  prefab: {fileID: 2577731528663922766, guid: 06646fbec40379846830b5fbc1ea75db, type: 3}
+  prefabBase: {fileID: 8615316820941180193, guid: 1a35969fd8645e741b79d1e0e949678f,
+    type: 3}
+  prefabFull: {fileID: 2577731528663922766, guid: 06646fbec40379846830b5fbc1ea75db,
+    type: 3}

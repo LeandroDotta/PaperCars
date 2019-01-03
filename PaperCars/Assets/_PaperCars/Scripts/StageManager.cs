@@ -22,7 +22,7 @@ public class StageManager : MonoBehaviour
     {
         player = availableVehicles.vehicles.Find(obj => obj.id == GamePreferences.SelectedVehicle);
 
-        GameObject playerObj = Instantiate(player.prefab, spawnPoint.position, Quaternion.identity);
+        GameObject playerObj = Instantiate(player.prefabFull, spawnPoint.position, Quaternion.identity);
         followCam.Follow = playerObj.transform;
         playerObj.SetActive(true);
     }

@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   vehicleName: Carro do Vitor
-  prefab: {fileID: 738691698979298683, guid: 3d7971ef73787a9409e1b10fa09d2517, type: 3}
+  prefabBase: {fileID: 1414303830142248, guid: 0970f2c39ff15c94d9c86331665ffd7b, type: 3}
+  prefabFull: {fileID: 738691698979298683, guid: 3d7971ef73787a9409e1b10fa09d2517,
+    type: 3}

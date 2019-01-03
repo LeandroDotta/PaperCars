@@ -8,5 +8,7 @@ public class VehicleData : ScriptableObject
     public int id;
     public string vehicleName;
 
-    public GameObject prefab;
+    [Header("Prefabs")]
+    public GameObject prefabBase;
+    public GameObject prefabFull;
 }
