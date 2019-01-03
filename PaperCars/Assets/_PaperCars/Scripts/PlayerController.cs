@@ -100,6 +100,14 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+            if(StageManager.Current.IsPaused)
+                StageManager.Current.Resume();
+            else
+                StageManager.Current.Pause();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

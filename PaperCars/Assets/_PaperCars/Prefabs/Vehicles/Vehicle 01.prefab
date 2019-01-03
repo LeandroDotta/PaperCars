@@ -152,6 +152,8 @@ MonoBehaviour:
   invulnerableTime: 1
   impactDamage: 5
   overturnedDamage: 2
+  health: {fileID: 2676041793104590365}
+  controller: {fileID: 9178105800418518202}
 --- !u!114 &9178105800418518202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,16 +279,6 @@ PrefabInstance:
     - target: {fileID: 4307226361030098, guid: 0970f2c39ff15c94d9c86331665ffd7b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 235380149013332890, guid: 0970f2c39ff15c94d9c86331665ffd7b,
-        type: 3}
-      propertyPath: m_UseMotor
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 235380149013332890, guid: 0970f2c39ff15c94d9c86331665ffd7b,
-        type: 3}
-      propertyPath: m_Motor.m_MotorSpeed
-      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0970f2c39ff15c94d9c86331665ffd7b, type: 3}

@@ -198,6 +198,8 @@ MonoBehaviour:
   invulnerableTime: 1
   impactDamage: 5
   overturnedDamage: 2
+  health: {fileID: 5904775998803960251}
+  controller: {fileID: 4179753450597479526}
 --- !u!114 &7289600075313512738
 MonoBehaviour:
   m_ObjectHideFlags: 0
