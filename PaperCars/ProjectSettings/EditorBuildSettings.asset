@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/_PaperCars/Scenes/Menu.unity
     guid: 7365c08138895944f83f0ab762856eec
   - enabled: 1
+    path: Assets/_PaperCars/Scenes/VehicleSelection.unity
+    guid: 471491145ce456d4fb2f374e90088c37
+  - enabled: 1
+    path: Assets/_PaperCars/Scenes/Stages/Stage 01.unity
+    guid: 7b6b5cf1f3930224abfc51e0a4030955
+  - enabled: 1
     path: Assets/_PaperCars/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

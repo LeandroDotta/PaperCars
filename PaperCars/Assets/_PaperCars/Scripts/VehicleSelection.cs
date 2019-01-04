@@ -72,7 +72,7 @@ public class VehicleSelection : MonoBehaviour
         loadedVehicles[index].SetActive(false);
     }
 
-    private void SelectNext()
+    public void SelectNext()
     {
         if (selectedIndex >= loadedVehicles.Count-1)
             return;
@@ -80,7 +80,7 @@ public class VehicleSelection : MonoBehaviour
         SelectVehicle(selectedIndex, selectedIndex + 1);
     }
 
-    private void SelectPrevious()
+    public void SelectPrevious()
     {
         if (selectedIndex <= 0)
             return;

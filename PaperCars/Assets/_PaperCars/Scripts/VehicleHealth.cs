@@ -28,6 +28,11 @@ public class VehicleHealth : MonoBehaviour
         }
 
         StartCoroutine("OverturnedDamageCoroutine");
+
+        if (healthBar == null)
+        {
+            healthBar = GameObject.FindObjectOfType<HealthBar>();
+        }
     }
 
     private void OnEnable()
@@ -94,7 +99,7 @@ public class VehicleHealth : MonoBehaviour
     {
         Hazard hazard = other.GetComponent<Hazard>();
 
-        if(hazard == null)
+        if (hazard == null)
             return;
 
         if (hazard.type == HazardType.DamagePerSecond)
@@ -108,7 +113,7 @@ public class VehicleHealth : MonoBehaviour
     {
         Hazard hazard = other.GetComponent<Hazard>();
 
-        if(hazard == null)
+        if (hazard == null)
             return;
 
         if (hazard.type == HazardType.DamagePerSecond)
